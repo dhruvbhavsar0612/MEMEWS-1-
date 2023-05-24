@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="login-form" method="post" enctype="multipart/form-data" action="index.html">
+        <!-- <input type="file" name="meme-image" id="meme-image" onchange="getFile(event)"/> -->
+        <div>
+            <input type="text" name="name" id="user-name" placeholder="username">
+        </div>
+        <div>
+            <input type="password" name="pass" id="user-password" placeholder="password" />
+        </div>
+        <div id="status">
+
+        </div>
+        <button id="submit" type="submit">Login</button>
+    </form>
+    
+    
+</body>
+<script src="login.js" type="module"></script>
+
+</html>

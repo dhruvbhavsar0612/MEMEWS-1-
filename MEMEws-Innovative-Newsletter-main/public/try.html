@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+        import { getDatabase, ref, set, child, onValue } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+        console.log('SuricalJavascript');
+        const firebaseConfig = {
+            apiKey: "AIzaSyCzlzaC68UwzxihrrUlE5xC5shWg4a1Z98",
+            authDomain: "memews-stage-1.firebaseapp.com",
+            databaseURL: "https://memews-stage-1-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "memews-stage-1",
+            storageBucket: "memews-stage-1.appspot.com",
+            messagingSenderId: "137531482217",
+            appId: "1:137531482217:web:6e4ec3eb48b7ef2f2c82f8",
+            measurementId: "G-GKP3S0KMFM"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+        const dbRef = ref(db,'/memes');
+
+        console.log(dbRef);
+
+        onValue(dbRef, (snapshot) => {
+
+
+
+            snapshot.forEach((childSnapshot) => {
+                const title = childSnapshot.key;
+                const childData = childSnapshot.val();
+                console.log(childSnapshot);
+            });
+        }, {
+            onlyOnce: true
+        });
+
+
+
+        // Initialize Firebase
+       
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
