@@ -37,10 +37,14 @@ function save() {
   const email = document.getElementById("user-email").value;
   const name = document.getElementById("user-name").value;
   const password = document.getElementById("user-password").value;
+  const statusDiv = document.getElementById("status")
   
   set(ref(getDatabase(), 'user/'+name), {
     email:email,
     name:name,
     password:password
   });
+
+  statusDiv.textContent = "Register successful, ";
+  statusDiv.innerHTML+= '<a href="./login.html">login here</a>';
 }

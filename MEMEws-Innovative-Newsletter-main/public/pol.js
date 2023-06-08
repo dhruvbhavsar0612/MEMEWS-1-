@@ -54,7 +54,7 @@ onValue(dbRef, (snapshot) => {
       var l2=document.createElement('div');
       l2.className='image';
       var imgdata=document.createElement('img');
-      imgdata.src=childData.img;
+      imgdata.src=childData.link;
       imgdata.alt=childData.title;
 
       l2.appendChild(imgdata);

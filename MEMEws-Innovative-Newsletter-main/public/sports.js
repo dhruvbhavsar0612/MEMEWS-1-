@@ -1,7 +1,4 @@
-
-
-  
-  // Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
   import { getDatabase, ref, set,onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
@@ -54,7 +51,7 @@ onValue(dbRef, (snapshot) => {
       var l2=document.createElement('div');
       l2.className='image';
       var imgdata=document.createElement('img');
-      imgdata.src=childData.img;
+      imgdata.src=childData.link;
       imgdata.alt=childData.title;
 
       l2.appendChild(imgdata);
